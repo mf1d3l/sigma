@@ -6,7 +6,7 @@ references:
     - https://enigma0x3.net/2017/01/05/lateral-movement-using-the-mmc20-application-com-object/
 author: Karneades, Swisscom CSIRT
 date: 2019-08-05
-modified: 2022-07-14
+modified: 2024-11-23
 tags:
     - attack.lateral-movement
     - attack.t1021.003
@@ -27,6 +27,7 @@ detection:
               - '\bash.exe'
               - '\reg.exe'
               - '\regsvr32.exe'
+              - '\conhost.exe'
         - Image|contains: '\BITSADMIN'
     condition: all of selection*
 fields:
