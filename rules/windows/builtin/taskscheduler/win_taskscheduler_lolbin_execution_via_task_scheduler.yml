@@ -6,7 +6,7 @@ references:
     - Internal Research
 author: Nasreddine Bencherchali (Nextron Systems)
 date: 2022-12-05
-modified: 2023-02-07
+modified: 2024-11-23
 tags:
     - attack.persistence
     - attack.t1053.005
@@ -26,6 +26,7 @@ detection:
             - '\regsvr32.exe'
             # - '\rundll32.exe'
             - '\wscript.exe'
+            - '\conhost.exe'
     # filter_system:
     #     Path|endswith: '\rundll32.exe'
     #     TaskName|startswith: '\Microsoft\Windows\'
