@@ -1,0 +1,34 @@
+title: Suspicious Malformed PE File Detected
+id: e6f454dc-4077-40ff-b980-f7c07010a2aa
+status: experimental
+description: |
+       Detects malformed PE file created by suspicious processes. This may be the result of a malicious script deobfuscating/concatenating a PE payload on disk.
+references:
+    - https://www.virustotal.com/gui/file/bdc7b917477bb49af7a5b06e5d9ed20e08fed25944f297a6b36a50d03d8a5777
+author: mf1d3l
+date: 2024-11-25
+tags:
+    - attack.defense-evasion
+    - attack.t1140
+logsource:
+    product: windows
+    category: file_executable_detected
+detection:
+    selection:
+        Image|endswith: 
+          - '\cmd.exe'
+          - '\powershell.exe'
+          - '\powershell_ise.exe'
+          - '\pwsh.exe'
+          - '\certutil.exe'
+          - '\wscript.exe'
+          - '\cscript.exe'
+          - '\mshta.exe'
+          - '\hh.exe'
+          - '\msxsl.exe'
+          - '\wmic.exe'        
+        Hashes|contains: 'IMPHASH=00000000000000000000000000000000'
+    condition: selection
+falsepositives:
+    - Unknown
+level: medium
