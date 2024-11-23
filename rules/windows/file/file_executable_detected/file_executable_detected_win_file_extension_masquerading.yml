@@ -1,0 +1,62 @@
+title: PE File Extension Masquerading 
+id: 9f50434f-3255-46ee-bd27-b5cf4980a693
+status: experimental
+description: |
+    Detects PE file dropped on disk with unconsistent file extension indicating a likely attempt at masquerading as benign files.
+references:
+    - https://www.virustotal.com/gui/file/bdc7b917477bb49af7a5b06e5d9ed20e08fed25944f297a6b36a50d03d8a5777
+author: mf1d3l
+date: 2024-11-25
+tags:
+    - attack.defense-evasion
+    - attack.t1036
+logsource:
+    product: windows
+    category: file_executable_detected
+detection:
+    selection:
+        TargetFilename|endswith:
+            - '.7z'
+            - '.dat'
+            - '.doc'
+            - '.docx'
+            - '.eml'
+            - '.htm'
+            - '.img'
+            - '.inf'
+            - '.ini'
+            - '.iso'
+            - '.jpeg'
+            - '.jpg'
+            - '.json'
+            - '.lnk'
+            - '.mp3'
+            - '.mp4'
+            - '.one'
+            - '.ost'
+            - '.pdf'
+            - '.pf'
+            - '.pif'
+            - '.png'
+            - '.ppt'
+            - '.pptx'
+            - '.pst'
+            - '.pub'
+            - '.rar'
+            - '.rtf'
+            - '.txt'
+            - '.udf'
+            - '.url'
+            - '.vhd'
+            - '.vhdx'
+            - '.wav'
+            - '.xls'
+            - '.xlsx'
+            - '.xml'
+            - '.xsd'
+            - '.yml'
+            - '.zip'
+    condition: selection
+falsepositives:
+    - Unknown
+level: high
