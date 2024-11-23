@@ -1,0 +1,26 @@
+title: GrimResource Image Load
+id: 4ebdb30a-0582-42d6-8781-1579486b7804
+status: test        
+description: |
+      Detects MMC loading the VBscript runtime or Wscript.shell. This may indicate the weaponization of a Console Taskpad file with the Grimresource technique.   
+references:
+    - https://www.virustotal.com/gui/file/939f509a8edc6b9da103fbcebe85630671ed591dd9e40243da37559e10dcfd80
+    - https://www.elastic.co/security-labs/grimresource
+author: mf1d3l  
+date: 2024-11-23
+tags:
+    - attack.defense-evasion
+    - attack.t1218.014 
+logsource:
+    category: image_load
+    product: windows
+detection:
+    selection:
+        Image|endswith: '\mmc.exe'
+        ImageLoaded|endswith: 
+          - '\vbscript.dll'
+          - '\wshom.ocx'
+    condition: selection
+falsepositives:
+    - False positives levels will differ Depending on the environment. You can use a combination of ParentImage and other keywords from the CommandLine field to filter legitimate activity
+level: low
