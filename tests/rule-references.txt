@@ -3859,3 +3859,13 @@ https://learn.microsoft.com/en-us/entra/id-protection/concept-identity-protectio
 https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction
 https://www.securonix.com/blog/seolurker-attack-campaign-uses-seo-poisoning-fake-google-ads-to-install-malware/
 https://learn.microsoft.com/en-us/azure/active-directory/authentication/howto-mfa-userstates
+https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4776
+https://learn.microsoft.com/en-us/iis/configuration/system.applicationhost/sites/sitedefaults/logfile/
+https://web.archive.org/web/20220830134315/https://content.fireeye.com/apt-41/rpt-apt41/
+https://www.trendmicro.com/content/dam/trendmicro/global/en/research/24/b/lockbit-attempts-to-stay-afloat-with-a-new-version/technical-appendix-lockbit-ng-dev-analysis.pdf
+https://admx.help/?Category=Windows_10_2016&Policy=Microsoft.Policies.InternetExplorer::IZ_ProxyByPass
+https://www.fortiguard.com/psirt/FG-IR-22-398
+https://microsoft.github.io/Threat-Matrix-for-Kubernetes/techniques/Delete%20K8S%20events/
+https://learn.microsoft.com/en-us/entra/architecture/security-operations-devices#non-compliant-device-sign-in
+https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-srvs/02b1f559-fda2-4ba3-94c2-806eb2777183
+https://www.trustedsec.com/blog/critical-vulnerability-in-progress-moveit-transfer-technical-analysis-and-recommendations/
